@@ -14,8 +14,8 @@ Using Angular if possible or javascript or typescript, complete the following an
 Poetic Profiles is a web application that displays Poets and their work easily. The main page has a list of all Poets in the PoetryDB at https://poetrydb.org. Click on a Poet's name and it will take you to a list of all of their poems by title. Click on a title and it will take you to a page where it says the poem's Name, the poem's contents, and who it is written by.
 
 If you see:
-Error Status: ${STATUS_CODE}
-Error Reason: ${DESCRIPTION_OF_STATUS}
+Error Status: /${STATUS_CODE}
+Error Reason: /${DESCRIPTION_OF_STATUS}
 
 This means there was a problem with your request. Check your URL and confirm the Author and Title of the poem are correct.
 
