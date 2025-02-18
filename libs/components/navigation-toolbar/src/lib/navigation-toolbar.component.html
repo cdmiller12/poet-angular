@@ -1,0 +1,14 @@
+<nav class="bg-gray-900 px-2 sm:px-4 py-2.5">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a class="flex items-center">
+            <span class="self-center text-white text-xl font-semibold whitespace-nowrap">Collin Miller</span>
+        </a>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-gray-900" id="mobile-menu-2">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+                <li [class]="'block rounded py-2 px-3 md:hover:bg-transparent md:hover:text-orange-300' + (selectedItem === 'Home' ? ' text-gray-200 bg-gray-800' : ' text-gray-500')" aria-current="page">
+                    <a href="/" (click)="navigateToHomePage()" aria-current="page">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

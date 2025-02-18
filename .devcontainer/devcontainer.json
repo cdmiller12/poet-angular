@@ -1,0 +1,32 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "postCreateCommand": "npm run startdb",
+  "postAttachCommand": {
+    "server": "npm start"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "src/App.js"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [3000, 3001]
+}
