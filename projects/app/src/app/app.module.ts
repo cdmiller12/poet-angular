@@ -13,6 +13,8 @@ import { PoetsComponent } from './poets/poets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthorComponent } from './author/author.component';
 import { PoemComponent } from './poem/poem.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { PoemComponent } from './poem/poem.component';
         CommonModule,
         MatAutocompleteModule,
         BrowserAnimationsModule,
-        NavigationToolbarModule
+        NavigationToolbarModule,
+        MatListModule,
+        MatCardModule
     ],
     providers: [],
     bootstrap: [AppComponent]

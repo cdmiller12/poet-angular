@@ -9,3 +9,7 @@ Using Angular if possible or javascript or typescript, complete the following an
 3. The script should throw an error if a 200 is not received.
 4. Enhance the script to retrieve both author and title by name and log all relevant data.
 5. Be prepared to expand the functionality of your solution during the interview.
+
+# TODO
+1. Add pagination to lists
+2. 

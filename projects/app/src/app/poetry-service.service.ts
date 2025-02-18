@@ -16,4 +16,9 @@ export class PoetryServiceService {
     getAuthor(name: string): Observable<any>{
       return this.http.get<any>('https://poetrydb.org/author/'+name+"/title")
     }
-}
+
+    getPoemByAuthor(authorName: string, poemName: string): Observable<any>{
+      return this.http.get<any>('https://poetrydb.org/author,title/'+authorName+";"+poemName);
+    }
+
+  }

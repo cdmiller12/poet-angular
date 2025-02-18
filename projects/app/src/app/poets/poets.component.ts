@@ -4,7 +4,7 @@ import { PoetryServiceService } from '../poetry-service.service';
 @Component({
   selector: 'app-poets',
   templateUrl: './poets.component.html',
-  styleUrls: ['./poets.component.scss']
+  styleUrls: ["./poets.component.scss"]
 })
 export class PoetsComponent implements OnInit {
 
