@@ -1,4 +1,4 @@
-<div class="card">
+<div *ngIf="!error" class="card">
     <mat-card appearance="raised">
         <mat-card-header class="header">
             <div class="header-title">
@@ -12,4 +12,9 @@
         </mat-card-content>
         <mat-card-footer class="footer">Written by: {{authorName}}</mat-card-footer>
     </mat-card>
+</div>
+<div *ngIf="error">
+    Error Status: {{errorStatus}}
+    <br>
+    Error Reason: {{errorReason}}
 </div>

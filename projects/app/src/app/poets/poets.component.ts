@@ -7,13 +7,21 @@ import { PoetryServiceService } from '../poetry-service.service';
   styleUrls: ["./poets.component.scss"]
 })
 export class PoetsComponent implements OnInit {
-
+  public error = false;
+  public errorReason = "";
+  public errorStatus = "";
   constructor(private poetryService: PoetryServiceService) { }
   public poets = [];
 
   ngOnInit(): void {
     this.poetryService.getPoets().subscribe(data => {
-      this.poets = data.authors;
+      if(!data.status){
+        this.poets = data.authors;
+      } else {
+        this.error=true;
+        this.errorReason=data.reason;
+        this.errorStatus=data.status;
+      }
     })
   }
 

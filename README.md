@@ -10,9 +10,19 @@ Using Angular if possible or javascript or typescript, complete the following an
 4. Enhance the script to retrieve both author and title by name and log all relevant data.
 5. Be prepared to expand the functionality of your solution during the interview.
 
+## How the App Works:
+Poetic Profiles is a web application that displays Poets and their work easily. The main page has a list of all Poets in the PoetryDB at https://poetrydb.org. Click on a Poet's name and it will take you to a list of all of their poems by title. Click on a title and it will take you to a page where it says the poem's Name, the poem's contents, and who it is written by.
+
+If you see:
+Error Status: ${STATUS_CODE}
+Error Reason: ${DESCRIPTION_OF_STATUS}
+
+This means there was a problem with your request. Check your URL and confirm the Author and Title of the poem are correct.
+
 ## TODO
 1. Add pagination to lists
-2. 
+2. Add search functionality on Poets page
+3. Make error handling more user friendly
 
 ## Running the Application:
 This repository is set up to work with github codespaces. To start development, create a new github codespace on this repository and give the devcontainer time to set up. Once all commands are given time to complete, the codespace will automatically serve the application. You can go to "ports" tab at the bottom of the codespace. There will be a link to port 4300. Click on that link and it will take you to a running version of the application.
