@@ -1,6 +1,6 @@
-<div *ngIf="!error" class="card">
+<mat-spinner *ngIf="loading" class="flex items-center"></mat-spinner>
+<div *ngIf="!error && !loading" class="card">
     <mat-card appearance="raised">
-        <mat-spinner *ngIf="loading" class="flex items-center"></mat-spinner>
         <mat-card-header class="header">
             <div class="header-title">
                 {{poemTitle}}
