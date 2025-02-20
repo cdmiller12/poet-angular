@@ -23,6 +23,7 @@ This means there was a problem with your request. Check your URL and confirm the
 1. Add pagination to lists
 2. Add search functionality on Poets page
 3. Make error handling more user friendly
+4. Enforce typing (remove any from service)
 
 ## Running the Application:
 This repository is set up to work with github codespaces. To start development, create a new github codespace on this repository and give the devcontainer time to set up. Once all commands are given time to complete, the codespace will automatically serve the application. You can go to "ports" tab at the bottom of the codespace. There will be a link to port 4300. Click on that link and it will take you to a running version of the application.
