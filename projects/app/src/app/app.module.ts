@@ -15,6 +15,7 @@ import { AuthorComponent } from './author/author.component';
 import { PoemComponent } from './poem/poem.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MatListModule} from '@angular/material/list';
         HttpClientModule,
         CommonModule,
         MatAutocompleteModule,
+        MatProgressSpinnerModule,
         BrowserAnimationsModule,
         NavigationToolbarModule,
         MatListModule,

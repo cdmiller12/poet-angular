@@ -4,6 +4,7 @@
         <div class="description">To see a list of the Poet's work, click on their name.</div>
     </div>
     <mat-nav-list class="list">
+        <mat-spinner *ngIf="loading" class="flex items-center"></mat-spinner>
         <mat-list-item class="list-item" *ngFor="let poet of poets; let i = index">
             <a href="/author/{{poet}}">{{poet}}</a>
         </mat-list-item>
