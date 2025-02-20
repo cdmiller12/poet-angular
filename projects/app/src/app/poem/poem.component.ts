@@ -12,6 +12,7 @@ export class PoemComponent implements OnInit {
   public authorName: string;
   public poemTitle: string;
   
+  public loading = false;
   public error = false;
   public errorReason = "";
   public errorStatus = "";
@@ -26,7 +27,9 @@ export class PoemComponent implements OnInit {
     public poemLines = [];
 
   ngOnInit(): void {
+    this.loading = true;
     this.poetryService.getPoemByAuthor(this.authorName, this.poemTitle).subscribe(data => {
+      this.loading = false;
       if (!data.status) {
         this.poemLines = data[0].lines;
       }
@@ -38,6 +41,13 @@ export class PoemComponent implements OnInit {
         this.errorStatus = data.status;
         this.errorReason = data.reason;
       }
+    },
+    err => {
+      this.loading = false;
+      this.error=true;
+      this.errorReason=err;
+      this.errorStatus=err;
+      console.error("Error -> ", err);
     });
   }
 

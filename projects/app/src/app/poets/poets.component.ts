@@ -25,6 +25,13 @@ export class PoetsComponent implements OnInit {
         this.errorReason=data.reason;
         this.errorStatus=data.status;
       }
+    },
+    err => {
+      this.loading = false;
+      this.error=true;
+      this.errorReason=err;
+      this.errorStatus=err;
+      console.error("Error -> ", err);
     })
   }
 

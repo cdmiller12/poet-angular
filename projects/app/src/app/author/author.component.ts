@@ -12,6 +12,7 @@ import { throwError } from 'rxjs';
 })
 export class AuthorComponent implements OnInit {
   public authorName: string;
+  public loading = false;
   public error = false;
   public errorReason = "";
   public errorStatus = "";
@@ -26,8 +27,10 @@ export class AuthorComponent implements OnInit {
   public poems = [];
 
   ngOnInit(): void {
+    this.loading = true;
     this.poetryService.getAuthor(this.authorName).subscribe(
       data => {
+        this.loading = false;
         if (!data.status) {
           this.error = false;
           this.errorReason = "";
@@ -46,6 +49,13 @@ export class AuthorComponent implements OnInit {
           this.errorReason = data.reason;
         }
       },
+      err => {
+        this.loading = false;
+        this.error=true;
+        this.errorReason=err;
+        this.errorStatus=err;
+        console.error("Error -> ", err);
+      }
     );
   }
 
