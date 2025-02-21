@@ -34,5 +34,4 @@ export class PoetsComponent implements OnInit {
       console.error("Error -> ", err);
     })
   }
-
 }

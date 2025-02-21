@@ -4,9 +4,7 @@
     </div>
     <mat-nav-list class="list">
         <mat-spinner *ngIf="loading" class="flex items-center"></mat-spinner>
-        <mat-list-item class="list-item" *ngFor="let poem of poems; let i = index">
-            <a href="/poem/{{authorName}}/{{poem}}">{{poem}}</a>
-        </mat-list-item>
+        <a mat-list-item class="list-item" *ngFor="let poem of poems; let i = index" href="/poem/{{authorName}}/{{poem}}">{{poem}}</a>
     </mat-nav-list>
 </div>
 
